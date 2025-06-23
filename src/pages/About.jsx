@@ -5,37 +5,38 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import Prof from '../assets/About.webp'
 
 const teamMembers = [
   {
     name: 'Kaifee',
     role: 'CEO & Full Stack developer',
     field: 'React, Tailwind , expressjs , mongodb , shadcnui , material ui ',
-    image: '/team/kaif.jpg'
+    image: Prof
   },
   {
     name: 'Saifee',
     role: 'CTO',
     field: 'Node.js, MongoDB',
-    image: '/team/kaif.jpg'
+    image: Prof
   },
   {
     name: 'Anubhav',
     role: 'Team Lead',
     field: 'Google Search, Analytics',
-    image: '/team/kaif.jpg'
+    image: Prof
   },
   {
     name: 'Ayush',
     role: 'UI/UX & Frontend',
     field: 'Elementor, WooCommerce',
-    image: '/team/kaif.jpg'
+    image: Prof
   },
   {
     name: 'Devesh',
     role: 'API Specialist and Backend',
     field: 'REST, GraphQL',
-    image: '/team/kaif.jpg'
+    image: Prof
   }
 ];
 

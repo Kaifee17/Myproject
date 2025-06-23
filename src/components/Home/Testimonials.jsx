@@ -5,6 +5,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay'; // Not required but good for clarity
 import { Pagination, Autoplay } from 'swiper/modules'; // ✅ import Autoplay
 import Strive from '../../assets/strive.png'
+import Byte from '../../assets/Bytewise.png'
 const testimonials = [
   {
     id: 1,
@@ -24,11 +25,11 @@ const testimonials = [
   },
   {
     id: 3,
-    name: 'Michael Smith',
-    role: 'Marketing Head, Brandly',
+    name: 'Bytewise',
+    role: 'Marketing Head, Bytewise',
     feedback:
       'The team was professional, creative, and delivered on time. Couldn’t ask for more.',
-    avatar: 'https://i.pravatar.cc/100?img=3',
+    avatar: Byte,
   },
 ];
 

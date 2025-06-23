@@ -7,7 +7,7 @@ import ContactForm from '../components/Contact/ContactForm'
 import Footer from '../components/Layout/Footer'
 import Navbar from '../components/Layout/Navbar'
 import PortfolioSlider from '../components/Portfolio/PortfolioSlider'
-
+import Trust from '../components/Home/TrustedBy'
 const Home = () => {
   return (
     <>
@@ -15,6 +15,7 @@ const Home = () => {
       <HeroSection  />
       <PortfolioSlider items={3} />
       <CTASection />
+      <Trust/>
       <Testimonials />
       <ContactForm />
 
