@@ -6,7 +6,8 @@ import AppContext from '../../context/AppContext';
 
 const HeroSection = () => {
   const navigate = useNavigate();
-  const { isLogin } = useContext(AppContext); 
+  const { isLogin, userData } = useContext(AppContext); 
+
   const [userEmail, setUserEmail] = useState('');
 
   useEffect(() => {
@@ -50,8 +51,8 @@ const HeroSection = () => {
 
             {isLogin ? (
                <div className="bg-gray-400 px-6 py-1 rounded-2xl shadow-lg font-bold text-white text-center leading-snug">
-               <p className="text-s capitalize">{context?.userData?.name || 'User'}</p>
-               <p className="text-xs">{context?.userData?.email || userEmail}</p>
+               <p className="text-s capitalize">{userData?.name || 'User'}</p>
+               <p className="text-xs">{userData?.email || userEmail}</p>
                 </div>
             ) : (
               <button className="bg-pink-500 hover:bg-gray-300 text-white px-10 py-3 rounded-full shadow-lg transition duration-300 hover:text-black font-bold">
