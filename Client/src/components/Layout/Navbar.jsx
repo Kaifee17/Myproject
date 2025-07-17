@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
 import logo from '../../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
-import AppContext from '../../context/appContext';
 import { fetchDataFromApi } from '../../utils/api'; // make sure this is your fetch helper
+import AppContext from '../../context/AppContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -3,7 +3,7 @@
   import { useNavigate } from 'react-router-dom';
   
   import { postData } from '../../utils/api';
-import AppContext from '../../context/appContext';
+  import AppContext from '../../context/AppContext';
 
   const ContactForm = () => {
     const [isLoading, setIsLoading] = useState(false);
