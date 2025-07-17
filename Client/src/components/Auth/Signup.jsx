@@ -7,7 +7,8 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router-dom';
 import { postData } from '../../utils/api';
 import CircularProgress from '@mui/material/CircularProgress';
-import AppContext from '../../context/AppContext';
+import AppContext from '../../context/appContext';
+
 
 const Signup = () => {
   const [isLoading, setIsLoading] = useState(false);
