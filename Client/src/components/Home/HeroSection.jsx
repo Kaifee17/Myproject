@@ -7,7 +7,6 @@ import AppContext from '../../context/AppContext';
 const HeroSection = () => {
   const navigate = useNavigate();
   const { isLogin } = useContext(AppContext); 
-  const context = useContext(AppContext)
   const [userEmail, setUserEmail] = useState('');
 
   useEffect(() => {
