@@ -24,7 +24,7 @@ import Request from './pages/RequestQuote';
 import Verify from './components/Auth/VerificationPage';
 import { fetchDataFromApi } from './utils/api';
 import ForgotPassword from './pages/forgotPassword';
-import AppContext from './context/AppContext';
+import AppContext from '../src/context/AppContext'
 
 
 
