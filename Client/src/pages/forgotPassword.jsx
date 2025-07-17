@@ -5,7 +5,7 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import CircularProgress from '@mui/material/CircularProgress';
 import { postData } from "../utils/api";
-import AppContext from "../context/AppContext";
+import AppContext from "../context/appContext";
 
 const ForgotPassword = () => {
   const [isPasswordShow, setIsPasswordShow] = useState(false);

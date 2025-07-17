@@ -4,7 +4,8 @@ import { postData } from '../../utils/api';
 import OtpBox from '../Common/otpBox';
 import verifyImg from '../Common/security.png';
 import { useNavigate } from 'react-router-dom';
-import AppContext from '../../context/AppContext';
+import AppContext from '../../context/appContext';
+
 
 
 const Verify = () => {

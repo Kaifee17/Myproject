@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import backgroundImage from '../../assets/background.avif';
 import { jwtDecode } from 'jwt-decode';
-import AppContext from '../../context/AppContext';
+import AppContext from '../../context/appContext';
+
 
 const HeroSection = () => {
   const navigate = useNavigate();

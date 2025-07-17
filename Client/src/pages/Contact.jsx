@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { postData } from '../utils/api';
-import AppContext from '../context/AppContext';
+import AppContext from '../context/appContext';
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [formFields, setFormFields] = useState({

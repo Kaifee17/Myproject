@@ -6,7 +6,7 @@ import { FcGoogle } from 'react-icons/fc';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Link, useNavigate } from 'react-router-dom';
 import { postData } from '../../utils/api';
-import AppContext from '../../context/AppContext';
+import AppContext from '../../context/appContext';
 
 
 
