@@ -5,7 +5,7 @@ import './config/instrument.js'
 import * as Sentry from "@sentry/node";
 import userRouter from './routes/user.route.js';
 import projectRouter from './routes/project.route.js';
-dotenv.config() 
+dotenv.config()
 
 import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
@@ -16,14 +16,29 @@ import Contactrouter from './routes/contact.route.js';
 
 const app = express()
 
+// ✅ Updated CORS setup to allow both localhost and Vercel frontend
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://myproject-iota-lac.vercel.app'
+];
+
 app.use(cors({
-  origin: 'http://localhost:5173', 
-  credentials: true,
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
 }));
+
 app.options('*', cors())
+
 app.use(express.json())
 app.use(cookieParser())
-app.use(morgan('dev')) 
+app.use(morgan('dev'))
 app.use(helmet({
   crossOriginEmbedderPolicy: false
 }))
@@ -34,15 +49,12 @@ app.get('/', (req, res) => {
   })
 })
 
-app.use('/api/user' ,userRouter)
-
+app.use('/api/user', userRouter)
 app.use('/api/project', projectRouter)
+app.use('/api/quote', QuoteRouter)
+app.use('/api/contactForm', Contactrouter)
 
-app.use('/api/quote', QuoteRouter);
-
-app.use('/api/contactForm' , Contactrouter);
-
-Sentry.setupExpressErrorHandler(app);
+Sentry.setupExpressErrorHandler(app)
 
 connectDB().then(() => {
   app.listen(process.env.PORT, () => {
