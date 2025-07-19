@@ -1,7 +1,7 @@
 // CMS Development Page (Red Shaded Theme)
 
 import React from 'react';
-import CMS from './CMS.jpg'
+import CMS from './CMS.webp'
 const CMSDevelopment = () => {
   return (
     <section className="pt-28 pb-20 px-6 bg-gradient-to-r from-rose-600 to-red-500 text-white min-h-screen">

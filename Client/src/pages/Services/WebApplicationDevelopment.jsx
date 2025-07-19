@@ -1,7 +1,7 @@
 // Web Application Development Page (Light Yellow Theme)
 
 import React from 'react';
-import WA from './WA.jpg'
+import WA from './WA.webp'
 const WebApplicationDevelopment = () => {
   return (
     <section className="pt-28 pb-20 px-6 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 min-h-screen">

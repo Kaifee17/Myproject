@@ -1,7 +1,7 @@
 // Responsive Web Design Page (Light Green Theme)
 
 import React from 'react';
-import RS from './Rs.jpg'
+import RS from './RS.webp'
 const ResponsiveWebDesign = () => {
   return (
     <section className="pt-28 pb-20 px-6 bg-gradient-to-r from-green-500 to-emerald-700 text-white min-h-screen">

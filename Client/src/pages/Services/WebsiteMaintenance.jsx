@@ -1,7 +1,7 @@
 // Website Maintenance Page (Dark Cream Theme)
 
 import React from 'react';
-import WM  from './WM.jpg'
+import WM  from './WM.webp'
 const WebsiteMaintenance = () => {
   return (
     <section className="pt-28 pb-20 px-6 bg-gradient-to-r from-amber-400 to-amber-400 text-gray-900 min-h-screen">

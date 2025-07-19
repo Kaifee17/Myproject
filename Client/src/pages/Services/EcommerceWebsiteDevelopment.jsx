@@ -1,7 +1,7 @@
 // eCommerce Website Development Page (Orange Theme)
 
 import React from 'react';
-import EM from './Em.jpg'
+import EM from './EM.webp'
 const EcommerceWebsiteDevelopment = () => {
   return (
     <section className="pt-28 pb-20 px-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-white min-h-screen">

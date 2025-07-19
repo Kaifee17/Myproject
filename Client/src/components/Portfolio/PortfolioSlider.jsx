@@ -9,11 +9,11 @@ import 'swiper/css/autoplay';
 
 import './style.css';
 
-import Movie from '../../assets/movi.png';
-import Coding from '../../assets/study.png';
-import Dashboard from '../../assets/sales.png';
-import Restraunt from '../../assets/Burges.png';
-import Learn from '../../assets/courses.png';
+import Movie from '../../assets/movi.webp';
+import Coding from '../../assets/study.webp';
+import Dashboard from '../../assets/sales.webp';
+import Restraunt from '../../assets/Burges.webp';
+import Learn from '../../assets/courses.webp';
 
 const projects = [
   {

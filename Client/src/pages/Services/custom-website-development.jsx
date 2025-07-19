@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import CWD from './CWD.jpg'
+import CWD from './CWD.webp'
 
 const CustomWebsiteDevelopment = () => {
   return (
