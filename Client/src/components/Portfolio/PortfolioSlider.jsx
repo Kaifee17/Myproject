@@ -88,7 +88,7 @@ const PortfolioSlider = ({ items = 3 }) => {
     {/* Hover overlay message */}
           <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 z-20">
           <div className="text-white text-center space-y-2">
-          <div className="text-lg font-semibold">Website Name : {project.title}</div>
+          <div className="text-lg font-semibold">{project.title}</div>
           <div className="text-xl font-medium">Click here to explore the website</div>
           </div>
           </div>
