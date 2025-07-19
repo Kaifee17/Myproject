@@ -1,21 +1,35 @@
 import React from 'react';
 import Strive from '../../assets/strive.png';
 import Bytewise from '../../assets/Bytewise.png';
-
+import Uber from '../../assets/Uber.png'
+import Google from '../../assets/Google.jpeg'
+import tencent from '../../assets/Tencentpng.png'
 const TrustedBy = () => {
   const companies = [
     {
-      name: 'Strive Training Institute',
-      logo: Strive,
+      logo : tencent
     },
     {
-      name: 'Tranquil Ai',
+      logo : Google
+    },
+    {
+      logo: Strive,
+    },
+
+    {
+      
+      logo:Uber
+    },
+    
+    {
+     
       logo: 'https://media.licdn.com/dms/image/v2/D560BAQGLFfE6duvqsA/company-logo_200_200/B56ZVUFNakGoAI-/0/1740872409207?e=1756339200&v=beta&t=GcsfLaktRlSh4yM-yqpBbvPc3KJIe3Y8fJUoo8MNKCw',
     },
     {
-      name: 'Bytewise Marketing',
+      
       logo: Bytewise,
     },
+    
   ];
 
   return (
@@ -29,7 +43,6 @@ const TrustedBy = () => {
             <div key={index} className="flex flex-col items-center">
               <img
                 src={company.logo}
-                alt={company.name}
                 className="h-12 object-contain mb-2"
               />
               <span className="text-sm font-medium text-gray-600 text-center">

@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+import CWD from './CWD.jpg'
 
 const CustomWebsiteDevelopment = () => {
   return (
@@ -8,7 +9,7 @@ const CustomWebsiteDevelopment = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Left Content */}
         <div className="flex-1">
-          <nav className="text-sm text-white/70 mb-4">Home &gt; Services&gt; Web Design &gt; Custom Web Design</nav>
+         
           <h1 className="text-5xl font-extrabold leading-tight mb-4">Custom Website<br />Design Company</h1>
           <p className="text-lg text-white/80 mb-6 max-w-xl">
             Partner with a top-rated custom website design company to create a fully optimized website,
@@ -38,7 +39,7 @@ const CustomWebsiteDevelopment = () => {
         {/* Right Image */}
         <div className="flex-1 text-center">
           <img
-            src="/images/services/custom-web.png"
+            src={CWD}
             alt="Custom Web Design"
             className="w-full max-w-md mx-auto rounded-xl shadow-lg"
           />

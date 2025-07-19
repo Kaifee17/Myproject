@@ -61,7 +61,12 @@ const RequestQuote = () => {
   return (
     <section className="min-h-screen flex flex-col md:flex-row pt-20">
       {/* Left Panel */}
-      <div className="md:w-1/2 bg-gradient-to-br from-orange-300 to-orange-600 text-white flex flex-col justify-center p-12">
+      <div className="md:w-1/2 bg-gradient-to-br from-orange-300 to-orange-600 text-white flex flex-col justify-center p-10">
+      <div className="bg-orange-100 border-l-4 border-yellow-500 text-yellow-700
+           p-4 mb-6 rounded-lg shadow-sm">
+        <p className="font-medium">📌 Note:</p>
+      <p>Please use the correct email address, as we will respond to you via the same email.</p>
+        </div>
         <h3 className="text-sm uppercase font-semibold tracking-wider">WebDone</h3>
         <h1 className="text-4xl font-extrabold leading-tight my-4">
           WebDone is here to help you with web
@@ -93,9 +98,7 @@ const RequestQuote = () => {
           <h1 className="text-3xl font-extrabold text-gray-800 mb-6">
             Let's Create Something Amazing Together
           </h1>
-          <h5 className="mb-6 font-semibold">
-            Use the correct email because we will respond to your email
-          </h5>
+          
 
           <input
             type="text"

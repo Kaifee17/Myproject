@@ -1,85 +1,67 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-// Swiper core styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/autoplay'; // For autoplay
-
+import 'swiper/css/autoplay';
 
 import './style.css';
 
-
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
-// Material UI Rating
-import Rating from '@mui/material/Rating';
-import Fit from '../../assets/Fitness.jpg'
-import Ecom from '../../assets/Ecommerce.jpg'
-import Port from '../../assets/Portfolio.jpg'
-import Restraunt from '../../assets/Restraunt.jpg'
-import Realstate from '../../assets/Realstate.jpg'
+import Movie from '../../assets/movi.png';
+import Coding from '../../assets/study.png';
+import Dashboard from '../../assets/sales.png';
+import Restraunt from '../../assets/Burges.png';
+import Learn from '../../assets/courses.png';
 
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Website',
-    image: Ecom,
-    description: 'A modern e-commerce platform built with React and Stripe.',
-    rating: 4.5,
+    title: 'Moviepedia',
+    link: 'https://moviepediav1.netlify.app/',
+    image: Movie,
   },
   {
     id: 2,
-    title: 'Portfolio Website',
-    image: Port,
-    description: 'A personal portfolio to showcase work and blog posts.',
-    rating: 5,
+    title: 'Learnify',
+    link: 'https://learnify-ten-zeta.vercel.app/',
+    image: Learn,
   },
   {
     id: 3,
-    title: 'Booking App',
-    image: 'https://img.freepik.com/free-vector/hotel-booking-application-interface-concept_23-2148575768.jpg',
-    description: 'An appointment scheduling app with admin dashboard.',
-    rating: 4,
+    title: 'Dashboard',
+    link: 'https://dashboard-five-kappa-83.vercel.app/dashboard',
+    image: Dashboard,
   },
   {
     id: 4,
-    title: 'Restaurant Website',
-    image:Restraunt,
-    description: 'Responsive restaurant site with menu, reservations, and reviews.',
-    rating: 4.2,
+    title: 'StudyNotion',
+    link: 'https://studynotion-r9xx.vercel.app/',
+    image: Coding,
   },
   {
     id: 5,
-    title: 'Real Estate Portal',
-    image: Realstate,
-    description: 'Listing platform for properties with map integration.',
-    rating: 4.7,
-  },
-  {
-    id: 6,
-    title: 'Fitness App',
-    image: Fit,
-    description: 'Workout tracking app with user profiles and analytics.',
-    rating: 4.3,
+    title: 'Food Website',
+    link: 'https://food-website-indol-seven.vercel.app/book.html',
+    image: Restraunt,
   },
 ];
 
-const PortfolioSlider = (props) => {
+const PortfolioSlider = ({ items = 3 }) => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-8">Our Portfolio</h2>
+
         <Swiper
-          slidesPerView={props.items }
+          slidesPerView={items}
           centeredSlides={true}
           spaceBetween={30}
           loop={true}
-          pagination={{ type: 'fraction' }}
           navigation={true}
           autoplay={{
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -91,22 +73,29 @@ const PortfolioSlider = (props) => {
         >
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
-              <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 min-h-[320px]">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="rounded-lg w-full mb-4"
-                />
-                <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
+            <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block h-[300px] bg-white border border-gray-200 rounded-xl shadow-md   hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+          >
+          <img
+            src={project.image}
+            alt={project.title}
+                 className="w-full h-full object-cover"
+          />
 
-                {/* Rating Stars */}
-                <div className="flex justify-center mt-2 mb-2">
-                  <Rating name="read-only" value={project.rating} precision={0.5} readOnly />
-                </div>
+    {/* Hover overlay message */}
+          <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 z-20">
+          <div className="text-white text-center space-y-2">
+          <div className="text-lg font-semibold">Website Name : {project.title}</div>
+          <div className="text-xl font-medium">Click here to explore the website</div>
+          </div>
+          </div>
 
-                <p className="text-gray-600">{project.description}</p>
-              </div>
-            </SwiperSlide>
+          </a>
+          </SwiperSlide>
+
           ))}
         </Swiper>
       </div>

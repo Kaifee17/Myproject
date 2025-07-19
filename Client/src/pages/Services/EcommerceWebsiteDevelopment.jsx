@@ -1,14 +1,14 @@
 // eCommerce Website Development Page (Orange Theme)
 
 import React from 'react';
-
+import EM from './Em.jpg'
 const EcommerceWebsiteDevelopment = () => {
   return (
     <section className="pt-28 pb-20 px-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-white min-h-screen">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Left Content */}
         <div className="flex-1">
-          <nav className="text-sm text-white/70 mb-4">Home &gt; Web Design &gt; eCommerce Web Design</nav>
+         
           <h1 className="text-5xl font-extrabold leading-tight mb-4">eCommerce Website<br />Development</h1>
           <p className="text-lg text-white/90 mb-6 max-w-xl">
             From intuitive product catalogs to seamless payment integrations, our eCommerce web
@@ -38,7 +38,7 @@ const EcommerceWebsiteDevelopment = () => {
         {/* Right Image */}
         <div className="flex-1 text-center">
           <img
-            src="/images/services/ecommerce-web.png"
+            src={EM}
             alt="eCommerce Website Development"
             className="w-full max-w-md mx-auto rounded-xl shadow-lg"
           />

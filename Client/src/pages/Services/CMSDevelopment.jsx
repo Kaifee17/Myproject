@@ -1,14 +1,14 @@
 // CMS Development Page (Red Shaded Theme)
 
 import React from 'react';
-
+import CMS from './CMS.jpg'
 const CMSDevelopment = () => {
   return (
     <section className="pt-28 pb-20 px-6 bg-gradient-to-r from-rose-600 to-red-500 text-white min-h-screen">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Left Content */}
         <div className="flex-1">
-          <nav className="text-sm text-white/70 mb-4">Home &gt; Web Design &gt; CMS Development</nav>
+         
           <h1 className="text-5xl font-extrabold leading-tight mb-4">CMS<br />Development</h1>
           <p className="text-lg text-white/90 mb-6 max-w-xl">
             Simplify content updates and publishing with powerful CMS solutions tailored to your workflow and brand.
@@ -38,7 +38,7 @@ const CMSDevelopment = () => {
         {/* Right Image */}
         <div className="flex-1 text-center">
           <img
-            src="/images/services/cms.png"
+            src={CMS}
             alt="CMS Development"
             className="w-full max-w-md mx-auto rounded-xl shadow-lg"
           />

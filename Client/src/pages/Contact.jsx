@@ -58,7 +58,13 @@ const Contact = () => {
         
         {/* Left: Red Section */}
         <div className="text-white p-10 flex flex-col justify-center">
+          <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700
+           p-4 mb-6 rounded-lg shadow-sm">
+        <p className="font-medium">📌 Note:</p>
+      <p>Please use the correct email address, as we will respond to you via the same email.</p>
+        </div>
           <h2 className="text-4xl font-bold mb-6">Contact Information</h2>
+          
           <p className="mb-6">We’d love to hear from you. Reach out for any questions or support.</p>
 
           <div className="space-y-6 text-lg">
