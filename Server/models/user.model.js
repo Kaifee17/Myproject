@@ -10,9 +10,17 @@ const UserSchema = new mongoose.Schema({
         required : [true , "Provide email"] , 
         unique : true
     }, 
-    password:{
-        type : String ,
-        required : [true , "Provide Password"]  
+    provider: {
+        type: String,
+        enum: ['credentials', 'google'],
+        default: 'credentials',
+    },
+
+    password: {
+        type: String,
+        required: function () {
+        return this.provider === 'credentials';
+    },
     },
     avatar: {
         type : String , 
@@ -64,6 +72,10 @@ const UserSchema = new mongoose.Schema({
   accesstoken:{
     type : String , 
     default : ''
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false
   }
 },
     {timestamps : true}

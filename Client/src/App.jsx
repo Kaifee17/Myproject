@@ -83,6 +83,7 @@ const App = () => {
           <Route path="/request-quote" element={<Request />} />
           <Route path="/verify" element={<Verify/>} />
           <Route path="/reset-password" element={<ForgotPassword/>} />
+          
         </Routes>
         <Footer />
         <Toaster />

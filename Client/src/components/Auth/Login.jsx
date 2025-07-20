@@ -186,15 +186,14 @@ const Login = () => {
           </div>
 
           {/* Google Login Button */}
-          <Button
-            variant="outlined"
-            fullWidth
-            className="!flex !items-center !justify-center gap-2"
-            style={{ padding: '10px 0', fontWeight: 'bold' }}
+          <a
+          href="https://myproject-yt5z.onrender.com/auth/google"  // or your deployed backend URL
+  className="flex items-center justify-center gap-2 w-full border-2 border-gray-300 py-2 rounded-md font-bold hover:bg-gray-100 transition-all"
           >
-            <FcGoogle className="text-xl" />
-            LOGIN WITH GOOGLE
-          </Button>
+           <FcGoogle className="text-xl" />
+           LOGIN WITH GOOGLE
+          </a>
+
         </form>
       </div>
     </section>
