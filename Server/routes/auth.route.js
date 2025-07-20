@@ -1,24 +1,18 @@
-import express from 'express';
-import passport from 'passport';
-import dotenv from 'dotenv'
-dotenv.config() ; 
 const router = express.Router();
-const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
+const FRONTEND_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://myproject-iota-lac.vercel.app'
+    : 'http://localhost:5173';
 
 router.get('/google',
   passport.authenticate('google', { scope: ['profile', 'email'] })
 );
 
-// Callback route after successful login
 router.get('/google/callback',
   passport.authenticate('google', { failureRedirect: '/auth/failure' }),
   (req, res) => {
-    const redirectUrl = req.headers.referer?.includes('vercel.app')
-      ? 'https://myproject-iota-lac.vercel.app'
-      : 'http://localhost:5173';
-
-    res.redirect(`${redirectUrl}/`);
+    res.redirect(`${FRONTEND_URL}/`);
   }
 );
 
