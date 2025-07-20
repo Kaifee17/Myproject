@@ -20,7 +20,7 @@ import router from './routes/auth.route.js';
 
 const app = express()
 
-// ✅ Updated CORS setup to allow both localhost and Vercel frontend
+
 const allowedOrigins = [
   'http://localhost:5173',
   'https://myproject-iota-lac.vercel.app'
@@ -57,7 +57,7 @@ app.use(
     { secure: false,
       maxAge: 24 * 60 * 60 * 1000
 
-     }, // Set to true in production with HTTPS
+     }, 
   })
 );
 app.use(passport.initialize());
@@ -78,8 +78,10 @@ app.use('/api/contactForm', Contactrouter)
 
 Sentry.setupExpressErrorHandler(app)
 
+const PORT = process.env.PORT || 5000;
+
 connectDB().then(() => {
-  app.listen(process.env.PORT, () => {
-    console.log("server is running on", process.env.PORT)
+  app.listen(PORT, () => {
+    console.log("server is running on", PORT)
   })
 })
