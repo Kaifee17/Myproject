@@ -24,7 +24,7 @@ const app = express()
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://myproject-iota-lac.vercel.app'
+  'https://webdone.in/'
 ];
 
 app.use(cors({

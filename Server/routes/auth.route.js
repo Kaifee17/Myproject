@@ -6,7 +6,7 @@ const router = express.Router();
 
 const FRONTEND_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://myproject-iota-lac.vercel.app'
+    ? 'https://webdone.in/'
     : 'http://localhost:5173';
 
 router.get('/google',
