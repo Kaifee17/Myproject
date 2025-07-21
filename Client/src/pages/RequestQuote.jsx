@@ -3,8 +3,9 @@ import Strive from '../assets/strive.png';
 import { useNavigate } from 'react-router-dom';
 import { postData } from '../utils/api'; // Ensure this exists
 import AppContext from '../context/appContext';
-
-
+import google from '../assets/Google.jpeg'
+import tencent from '../assets/Tencentpng.png'
+import uber from '../assets/Uber.png'
 const RequestQuote = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [formFields, setFormFields] = useState({
@@ -80,12 +81,16 @@ const RequestQuote = () => {
 
         <h3 className="text-xs mt-10 tracking-wide">TRUSTED BY</h3>
         <div className="flex gap-4 mt-4">
+          <img src={tencent} alt="Strive Training" className="h-10" />
           <img
             src="https://media.licdn.com/dms/image/v2/D560BAQGLFfE6duvqsA/company-logo_200_200/B56ZVUFNakGoAI-/0/1740872409207?e=1756339200&v=beta&t=GcsfLaktRlSh4yM-yqpBbvPc3KJIe3Y8fJUoo8MNKCw"
             alt="Tranquil AI"
             className="h-10"
           />
           <img src={Strive} alt="Strive Training" className="h-10" />
+          <img src={uber} alt="Strive Training" className="h-10" />
+          <img src={google} alt="Strive Training" className="h-10" />
+          
         </div>
       </div>
 
