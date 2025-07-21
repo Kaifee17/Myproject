@@ -80,18 +80,14 @@ const RequestQuote = () => {
         </div>
 
         <h3 className="text-xs mt-10 tracking-wide">TRUSTED BY</h3>
-        <div className="flex gap-4 mt-4">
-          <img src={tencent} alt="Strive Training" className="h-10" />
-          <img
-            src="https://media.licdn.com/dms/image/v2/D560BAQGLFfE6duvqsA/company-logo_200_200/B56ZVUFNakGoAI-/0/1740872409207?e=1756339200&v=beta&t=GcsfLaktRlSh4yM-yqpBbvPc3KJIe3Y8fJUoo8MNKCw"
-            alt="Tranquil AI"
-            className="h-10"
-          />
-          <img src={Strive} alt="Strive Training" className="h-10" />
-          <img src={uber} alt="Strive Training" className="h-10" />
-          <img src={google} alt="Strive Training" className="h-10" />
-          
-        </div>
+        <div className="flex flex-wrap gap-4 mt-4 max-w-full">
+  <img src={tencent} alt="Tencent" className="h-10 object-contain" />
+  <img src="..." alt="Tranquil AI" className="h-10 object-contain" />
+  <img src={Strive} alt="Strive" className="h-10 object-contain" />
+  <img src={uber} alt="Uber" className="h-10 object-contain" />
+  <img src={google} alt="Google" className="h-10 object-contain" />
+</div>
+
       </div>
 
       {/* Right Form Panel */}
