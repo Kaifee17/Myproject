@@ -8,6 +8,6 @@ import { requestQuote } from "../controllers/quote.controller.js";
 
 
 
-QuoteRouter.post('/submit-quote',auth,  requestQuote);
+QuoteRouter.post('/submit-quote',  requestQuote);
 
 export default QuoteRouter ; 
