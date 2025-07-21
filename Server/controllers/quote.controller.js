@@ -13,11 +13,6 @@ import UserModel from "../models/user.model.js";
 
 export async function requestQuote(req, res) {
   try {
-    const userId = req.userId;
-    if (!userId) {
-      return res.status(401).json({ message: "Unauthorized: No user ID found" });
-    }
-
     const { name, companyName, email, phone, priceRange, message } = req.body;
 
     if (!name || !companyName || !email || !phone || !priceRange || !message) {
@@ -28,26 +23,6 @@ export async function requestQuote(req, res) {
       });
     }
 
-    
-    const user = await UserModel.findById(userId);
-    if (!user) {
-      return res.status(404).json({
-        success: false,
-        error: true,
-        message: 'User not found',
-      });
-    }
-
-    
-    if (user.email !== email) {
-      return res.status(403).json({
-        success: false,
-        error: true,
-        message: 'Email mismatch: the email provided does not match your account',
-      });
-    }
-
-   
     const newEntry = new QuoteModel({
       name,
       companyName,
@@ -55,21 +30,20 @@ export async function requestQuote(req, res) {
       phone,
       priceRange,
       message,
-      user: userId,
+      user: null, // No user if it's public
     });
 
     await newEntry.save();
 
-    
     await sendEmailFun({
       sendTo: process.env.EMAIL,
-      subject: "Check the message you got from the client",
+      subject: "New Quote Request from Website",
       html: QuoteEmail({ email, message, companyName, phone, priceRange }),
     });
 
     res.status(201).json({
       success: true,
-      message: 'Contact form submitted successfully and email sent',
+      message: 'Quote submitted successfully and email sent',
       data: newEntry,
     });
 
@@ -81,3 +55,4 @@ export async function requestQuote(req, res) {
     });
   }
 }
+
