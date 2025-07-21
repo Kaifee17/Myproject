@@ -18,6 +18,7 @@ import QuoteRouter from './routes/quote.route.js';
 import Contactrouter from './routes/contact.route.js';
 import router from './routes/auth.route.js';
 
+
 const app = express()
 
 
@@ -70,6 +71,7 @@ app.get('/', (req, res) => {
   })
 })
 app.use('/auth' , router)
+
 
 app.use('/api/user', userRouter)
 app.use('/api/project', projectRouter)

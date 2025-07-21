@@ -25,7 +25,7 @@ import Verify from './components/Auth/VerificationPage';
 import { fetchDataFromApi } from './utils/api';
 import ForgotPassword from './pages/forgotPassword';
 import AppContext from './context/appContext';
-
+import EmailButton from './components/Common/EmailButton';
 
 
 
@@ -85,6 +85,7 @@ const App = () => {
           <Route path="/reset-password" element={<ForgotPassword/>} />
           
         </Routes>
+        <EmailButton/>
         <Footer />
         <Toaster />
       </AppContext.Provider>
