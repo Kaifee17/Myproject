@@ -44,7 +44,7 @@ const Footer = () => {
           <p className="text-gray-400 text-sm mb-2">webdone00@gmail.com</p>
           <p className="text-gray-400 text-sm mb-2">Bellandur, Bangalore, India</p>
           <div className="flex gap-4 mt-4 text-lg">
-            <a href="www.linkedin.com/in/web-done-3b53b1376"><FaLinkedin /></a>
+            <a href="https://www.linkedin.com/in/web-done-3b53b1376/"><FaLinkedin /></a>
             <a href="https://www.instagram.com/webdone00?igsh=MXJzbG9zN3Y3Y3lpZA=="><FaInstagram /></a>
             <a href="https://www.facebook.com/profile.php?id=61578284322005"><FaFacebook /></a>
             <a href="https://x.com/?lang=en"><FaTimes /></a>
