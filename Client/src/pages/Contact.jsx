@@ -70,7 +70,7 @@ const Contact = () => {
           <div className="space-y-6 text-lg">
             <div>
               <h4 className="font-semibold">📍 Address</h4>
-              <p>Whitefield<br />Bengaluru, India 560066</p>
+              <p>Bellandur<br />Bengaluru, India 560066</p>
             </div>
             <div>
               <h4 className="font-semibold">✉️ Email</h4>
