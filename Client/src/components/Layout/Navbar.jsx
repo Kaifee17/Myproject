@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import logo from '../../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
-import { fetchDataFromApi } from '../../utils/api'; // make sure this is your fetch helper
+import { fetchDataFromApi } from '../../utils/api'; 
 import AppContext from '../../context/appContext';
 
 
