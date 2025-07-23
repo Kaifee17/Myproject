@@ -116,7 +116,7 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="w-80 bg-gray-400 text-black p-6 rounded-xl shadow-md border border-gray-600 h-[320px] mx-auto">
+              <div className="w-80 bg-black text-gray-300 p-6 rounded-xl shadow-md border border-gray-600 h-[320px] mx-auto">
                 <div className="flex justify-center mb-4">
                   <img
                     src={testimonial.avatar}
@@ -134,17 +134,17 @@ const Testimonials = () => {
 
         {/* Swiper navigation styling */}
         <style>{`
-          .swiper-button-next,
-          .swiper-button-prev {
-            color: black;
-            z-index: 50;
-            top: 40%;
-          }
+      .swiper-button-next,
+      .swiper-button-prev {
+      color: #9CA3AF
+
+      }
 
           .swiper-button-next::after,
           .swiper-button-prev::after {
             font-size: 24px;
             font-weight: bold;
+            text-gray
           }
         `}</style>
       </div>
