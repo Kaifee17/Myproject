@@ -105,37 +105,28 @@ const Testimonials = () => {
           What Our Clients Say
         </h2>
 
-        <div className="relative">
-          {/* Testimonial Card */}
-          <div className="bg-black text-white p-6 rounded-xl shadow-md border border-gray-700 mx-auto w-full max-w-sm h-[320px] transition-all duration-300 ease-in-out">
-            <div className="flex justify-center mb-4">
-              <img
-                src={testimonials[currentIndex].avatar}
-                alt={testimonials[currentIndex].name}
-                className="w-16 h-16 rounded-full border-2 border-gray-400 object-cover"
-              />
-            </div>
-            <p className="italic mb-8">“{testimonials[currentIndex].feedback}”</p>
-            <h4 className="font-semibold text-lg">{testimonials[currentIndex].name}</h4>
-            <p className="text-sm">{testimonials[currentIndex].role}</p>
-          </div>
-
-          {/* Controls */}
-          <div className="flex justify-center mt-6 gap-4">
-            <button
-              onClick={handlePrev}
-              className="bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200"
-            >
-              ‹
-            </button>
-            <button
-              onClick={handleNext}
-              className="bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200"
-            >
-              ›
-            </button>
-          </div>
+        <div className="overflow-hidden">
+  <div className="flex w-max animate-marquee">
+    {[...testimonials, ...testimonials].map((testimonial, index) => (
+      <div
+        key={`${testimonial.id}-${index}`}
+        className="min-w-[20rem] shrink-0 bg-black p-6 rounded-xl mx-4 text-white"
+      >
+        <div className="flex justify-center mb-4">
+          <img
+            src={testimonial.avatar}
+            alt={testimonial.name}
+            className="w-16 h-16 rounded-full border-2 border-gray-400 object-cover"
+          />
         </div>
+        <p className="italic mb-8 line-clamp-4">“{testimonial.feedback}”</p>
+        <h4 className="font-semibold text-lg">{testimonial.name}</h4>
+        
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
     </section>
   );

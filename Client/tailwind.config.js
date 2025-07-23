@@ -6,35 +6,14 @@ export default {
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 12s linear infinite', // faster than 15s
-        'marquee-fast': 'marquee 8s linear infinite',
+        marquee: 'marquee 10s linear infinite',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' }, // assuming double content
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
     },
   },
-  plugins: [
-    plugin(function ({ addComponents }) {
-      addComponents({
-        '.marquee-wrapper': {
-          overflow: 'hidden',
-          position: 'relative',
-        },
-        '.marquee-content': {
-          display: 'flex',
-          width: 'max-content',
-          animation: 'marquee 12s linear infinite',
-        },
-        '@media (max-width: 768px)': {
-          '.marquee-content': {
-            animation: 'marquee-fast 8s linear infinite',
-          },
-        },
-      });
-    }),
-  ],
 };
