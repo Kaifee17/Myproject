@@ -103,12 +103,12 @@ const Testimonials = () => {
         <Swiper
           modules={[Autoplay, Navigation]}
           spaceBetween={30}
-          slidesPerView={1.2}
+          slidesPerView={1}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           navigation={true}
           loop={true}
           breakpoints={{
-            640: { slidesPerView: 1.5 },
+            640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
@@ -116,17 +116,17 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="w-80 bg-gradient-to-br from-black to-gray-800 p-6 rounded-xl shadow-md border border-gray-700 h-[320px] mx-auto">
+              <div className="w-80 bg-gray-400 text-black p-6 rounded-xl shadow-md border border-gray-600 h-[320px] mx-auto">
                 <div className="flex justify-center mb-4">
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full border-2 border-gray-400 object-cover"
+                    className="w-16 h-16 rounded-full border-2 border-gray-500 object-cover"
                   />
                 </div>
-                <p className="text-white mb-12 italic line-clamp-4">“{testimonial.feedback}”</p>
-                <h4 className="font-semibold text-lg text-white">{testimonial.name}</h4>
-                <p className="text-sm text-gray-300">{testimonial.role}</p>
+                <p className="italic mb-8 line-clamp-4">“{testimonial.feedback}”</p>
+                <h4 className="font-semibold text-lg">{testimonial.name}</h4>
+                
               </div>
             </SwiperSlide>
           ))}
