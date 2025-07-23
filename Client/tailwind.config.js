@@ -1,12 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-import plugin from 'tailwindcss/plugin';
-
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 10s linear infinite',
+        marquee: 'marquee 12s linear infinite',
       },
       keyframes: {
         marquee: {
@@ -16,4 +14,5 @@ export default {
       },
     },
   },
+  plugins: [],
 };
