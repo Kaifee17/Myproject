@@ -1,4 +1,10 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
+
 import Byte from '../../assets/Bytewise.png';
 import USA from '../../assets/USA.webp';
 import UK from '../../assets/UK.webp';
@@ -89,20 +95,28 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const doubled = [...testimonials, ...testimonials];
-
   return (
     <section className="py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">What Our Clients Say</h2>
 
-        <div className="relative overflow-hidden">
-          <div className="flex gap-6 animate-marquee">
-            {doubled.map((testimonial, index) => (
-              <div
-                key={`${testimonial.id}-${index}`}
-                className="w-80 shrink-0 bg-gradient-to-br from-black to-gray-800 p-6 rounded-xl shadow-md border border-gray-700 h-[320px]"
-              >
+        <Swiper
+          modules={[Autoplay, Navigation]}
+          spaceBetween={30}
+          slidesPerView={1.2}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          navigation={true}
+          loop={true}
+          breakpoints={{
+            640: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="relative z-10"
+        >
+          {testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
+              <div className="w-80 bg-gradient-to-br from-black to-gray-800 p-6 rounded-xl shadow-md border border-gray-700 h-[320px] mx-auto">
                 <div className="flex justify-center mb-4">
                   <img
                     src={testimonial.avatar}
@@ -112,11 +126,27 @@ const Testimonials = () => {
                 </div>
                 <p className="text-white mb-12 italic line-clamp-4">“{testimonial.feedback}”</p>
                 <h4 className="font-semibold text-lg text-white">{testimonial.name}</h4>
-                
+                <p className="text-sm text-gray-300">{testimonial.role}</p>
               </div>
-            ))}
-          </div>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Swiper navigation styling */}
+        <style>{`
+          .swiper-button-next,
+          .swiper-button-prev {
+            color: black;
+            z-index: 50;
+            top: 40%;
+          }
+
+          .swiper-button-next::after,
+          .swiper-button-prev::after {
+            font-size: 24px;
+            font-weight: bold;
+          }
+        `}</style>
       </div>
     </section>
   );

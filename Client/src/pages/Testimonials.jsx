@@ -1,4 +1,5 @@
 import React from 'react';
+import Byte from '../assets/Bytewise.png';
 import USA from '../assets/USA.webp';
 import UK from '../assets/UK.webp';
 import AUS from '../assets/AUS.webp';
@@ -88,22 +89,22 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const doubled = [...testimonials, ...testimonials]; // for looping marquee
+  const doubled = [...testimonials, ...testimonials]; // For infinite scroll effect
 
   return (
-    <section className="py-16 bg-gradient-to-br from-pink-400 to-pink-700">
+    <section className="mt-34 py-16 bg-gray-500">
+
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-white">
+        <h2 className="text-3xl md:text-4xl font-bold mt-10 mb-12 text-black">
           What Our Clients Say
         </h2>
 
-        {/* Marquee Container */}
-        <div className="overflow-x-auto whitespace-nowrap scroll-smooth">
-          <div className="inline-flex animate-marquee w-max">
+        <div className="relative overflow-hidden">
+          <div className="flex gap-6 animate-marquee">
             {doubled.map((testimonial, index) => (
               <div
                 key={`${testimonial.id}-${index}`}
-                className="min-w-[20rem] shrink-0 bg-black p-6 rounded-xl mx-4 text-white h-[320px]"
+                className="w-80 shrink-0 bg-gradient-to-br from-black to-gray-800 p-6 rounded-xl shadow-md border border-gray-700 h-[320px]"
               >
                 <div className="flex justify-center mb-4">
                   <img
@@ -112,9 +113,12 @@ const Testimonials = () => {
                     className="w-16 h-16 rounded-full border-2 border-gray-400 object-cover"
                   />
                 </div>
-                <p className="italic mb-8 line-clamp-4">“{testimonial.feedback}”</p>
-                <h4 className="font-semibold text-lg">{testimonial.name}</h4>
-                <p className="text-sm">{testimonial.role}</p>
+                <p className="text-white mb-12 italic line-clamp-4">
+                  “{testimonial.feedback}”
+                </p>
+                <h4 className="font-semibold text-lg text-white">
+                  {testimonial.name}
+                </h4>
               </div>
             ))}
           </div>
