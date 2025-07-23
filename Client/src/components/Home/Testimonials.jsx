@@ -133,20 +133,7 @@ const Testimonials = () => {
         </Swiper>
 
         {/* Swiper navigation styling */}
-        <style>{`
-      .swiper-button-next,
-      .swiper-button-prev {
-      color: #9CA3AF
-
-      }
-
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
-            font-size: 24px;
-            font-weight: bold;
-            text-gray
-          }
-        `}</style>
+        
       </div>
     </section>
   );
