@@ -1,5 +1,4 @@
-import React from 'react';
-import Byte from '../assets/Bytewise.png';
+import React, { useState } from 'react';
 import USA from '../assets/USA.webp';
 import UK from '../assets/UK.webp';
 import AUS from '../assets/AUS.webp';
@@ -89,38 +88,52 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const doubled = [...testimonials, ...testimonials]; // For infinite scroll effect
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   return (
-    <section className="mt-34 py-16 bg-gray-500">
-
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mt-10 mb-12 text-black">
+    <section className="mt-34 py-16 bg-gradient-to-br from-pink-400 to-pink-700">
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mt-10 mb-12 text-white">
           What Our Clients Say
         </h2>
 
-        <div className="relative overflow-hidden">
-          <div className="flex gap-6 animate-marquee">
-            {doubled.map((testimonial, index) => (
-              <div
-                key={`${testimonial.id}-${index}`}
-                className="w-80 shrink-0 bg-gradient-to-br from-black to-gray-800 p-6 rounded-xl shadow-md border border-gray-700 h-[320px]"
-              >
-                <div className="flex justify-center mb-4">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-16 h-16 rounded-full border-2 border-gray-400 object-cover"
-                  />
-                </div>
-                <p className="text-white mb-12 italic line-clamp-4">
-                  “{testimonial.feedback}”
-                </p>
-                <h4 className="font-semibold text-lg text-white">
-                  {testimonial.name}
-                </h4>
-              </div>
-            ))}
+        <div className="relative">
+          {/* Testimonial Card */}
+          <div className="bg-black text-white p-6 rounded-xl shadow-md border border-gray-700 mx-auto w-full max-w-sm h-[320px] transition-all duration-300 ease-in-out">
+            <div className="flex justify-center mb-4">
+              <img
+                src={testimonials[currentIndex].avatar}
+                alt={testimonials[currentIndex].name}
+                className="w-16 h-16 rounded-full border-2 border-gray-400 object-cover"
+              />
+            </div>
+            <p className="italic mb-8">“{testimonials[currentIndex].feedback}”</p>
+            <h4 className="font-semibold text-lg">{testimonials[currentIndex].name}</h4>
+            <p className="text-sm">{testimonials[currentIndex].role}</p>
+          </div>
+
+          {/* Controls */}
+          <div className="flex justify-center mt-6 gap-4">
+            <button
+              onClick={handlePrev}
+              className="bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200"
+            >
+              ‹
+            </button>
+            <button
+              onClick={handleNext}
+              className="bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200"
+            >
+              ›
+            </button>
           </div>
         </div>
       </div>
