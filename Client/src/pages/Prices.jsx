@@ -6,7 +6,7 @@ const LandingPage = () => {
   const plans = [
     {
       title: 'Startup Plan',
-      price: '₹12,999/-',
+      price: '₹12,999/($155.90 usd)',
       desc: 'Best For Startup’s',
       renewal: 'Annual Renewal 2999/-',
       features: [
@@ -36,7 +36,7 @@ const LandingPage = () => {
     },
     {
       title: 'Classic Plan',
-      price: '₹21,999/-',
+      price: '₹21,999/($255 usd)',
       desc: 'Best for Startups & Small Businesses',
       badge: 'POPULAR',
       renewal: 'Annual Renewal 3499/-',
@@ -68,7 +68,7 @@ const LandingPage = () => {
     },
     {
       title: 'Premium Plan',
-      price: '₹31,999/-',
+      price: '₹31,999/($382 USD)',
       desc: 'Best For Enterprises',
       renewal: 'Annual Renewal 3999/-',
       features: [

@@ -39,9 +39,7 @@ const TrustedBy = () => {
     <>
       {/* Inline Tailwind-style animation using @layer */}
       <style>{`
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
+        
 
         @layer utilities {
           @keyframes scroll {
