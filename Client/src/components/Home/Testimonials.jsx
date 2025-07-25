@@ -116,7 +116,8 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="w-80 bg-black text-gray-300 p-6 rounded-xl shadow-md border border-gray-600 h-[320px] mx-auto">
+              <div className="w-full max-w-xs sm:w-80 bg-black text-gray-300 p-6 rounded-xl shadow-md border border-gray-600 h-[320px] mx-auto">
+
                 <div className="flex justify-center mb-4">
                   <img
                     src={testimonial.avatar}
