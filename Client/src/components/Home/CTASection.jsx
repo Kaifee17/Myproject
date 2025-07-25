@@ -3,10 +3,10 @@ import React from 'react';
 const CTASection = () => {
   return (
     <section className="bg-pink-400 text-white py-16 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4">
         Ready to Start Your Project?
       </h2>
-      <p className="mb-8 text-lg">
+      <p className="mb-8 text-lg font-serif">
         Let's bring your ideas to life — contact us today.
       </p>
       <a

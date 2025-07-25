@@ -98,7 +98,7 @@ const Testimonials = () => {
   return (
     <section className="py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">What Our Clients Say</h2>
+        <h2 className="text-3xl font-serif md:text-4xl font-semibold mb-12">What Our Clients Say</h2>
 
         <Swiper
           modules={[Autoplay, Navigation]}

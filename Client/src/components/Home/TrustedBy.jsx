@@ -54,7 +54,7 @@ const TrustedBy = () => {
       `}</style>
 
       <section className="bg-white py-12 px-4 md:px-10 overflow-hidden">
-        <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-800 mb-10">
+        <h2 className="text-center font-serif text-2xl md:text-3xl font-bold text-gray-800 mb-10">
           Trusted by Leading Companies
         </h2>
 

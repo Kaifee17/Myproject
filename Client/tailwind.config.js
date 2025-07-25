@@ -6,6 +6,13 @@ export default {
       animation: {
         marquee: 'marquee 12s linear infinite',
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif' ],
+        playfair: ['Playfair Display', 'serif'],
+        playwrite :['Playwrite'] , 
+        dancing: ['"Dancing Script"', 'cursive'],
+        jakarta :[' Plus Jakarta Sans', 'sans-serif']
+      },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },

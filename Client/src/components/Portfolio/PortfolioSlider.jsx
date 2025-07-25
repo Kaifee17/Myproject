@@ -52,7 +52,7 @@ const PortfolioSlider = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-8">Our Portfolio</h2>
+        <h2 className="text-3xl font-serif font-bold mb-8">Our Portfolio</h2>
 
         <Swiper
           slidesPerView={1} // Default: 1 slide on mobile

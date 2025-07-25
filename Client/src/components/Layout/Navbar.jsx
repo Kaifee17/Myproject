@@ -52,7 +52,7 @@ const logout = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo" className="w-10 h-10 object-contain" />
-          <a className="text-xl font-bold text-gray-300" href="/">WebDone</a>
+          <a className="text-xl font-dancing  font-bold text-gray-300 " href="/">WebDone</a>
         </div>
 
         <div className="md:hidden">
@@ -64,11 +64,11 @@ const logout = () => {
         <ul className={`flex flex-col md:flex-row md:items-center md:gap-8 gap-4 absolute md:static top-full left-0 w-full md:w-auto bg-gray-900 md:bg-transparent text-white px-4 py-2 md:p-0 transition-all duration-300 ${
           menuOpen ? 'block' : 'hidden md:flex'
         }`}>
-          <li><a href="/" className="hover:text-gray-400">Home</a></li>
-          <li><a href="/about" className="hover:text-gray-400">Prices</a></li>
-          <li><a href="/services" className="hover:text-gray-400">Services</a></li>
-          <li><a href="/testimonials" className="hover:text-gray-400">Testimonials</a></li>
-          <li><a href="/contact" className="hover:text-gray-400">Contact</a></li>
+          <li><a href="/" className="font-jakarta hover:text-gray-400">Home</a></li>
+          <li><a href="/about" className="font-jakarta hover:text-gray-400">Prices</a></li>
+          <li><a href="/services" className="font-jakarta hover:text-gray-400">Services</a></li>
+          <li><a href="/testimonials" className="font-jakarta hover:text-gray-400">Testimonials</a></li>
+          <li><a href="/contact" className="font-jakarta hover:text-gray-400">Contact</a></li>
           <li>
             <a
               href="/request-quote"
