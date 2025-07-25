@@ -33,41 +33,48 @@ const HeroSection = () => {
     >
       <div className="bg-black bg-opacity-20 w-full h-full flex items-center justify-center">
         <div className="text-center max-w-3xl px-6">
-          <div className="text-4xl md:text-6xl font-bold leading-tight mb-6 flex flex-wrap justify-center gap-x-2">
-            <BlurText
-              text="You Need"
-              delay={100}
-              animateBy="words"
-              direction="top"
-              className="text-white"
-            />
-            <BlurText
-              text="Website,"
-              delay={200}
-              animateBy="words"
-              direction="top"
-              className="text-emerald-400"
-            />
-            <BlurText
-              text="We Create"
-              delay={300}
-              animateBy="words"
-              direction="top"
-              className="text-emerald-400"
-            />
-            <BlurText
-              text="Websites"
-              delay={400}
-              animateBy="words"
-              direction="top"
-              className="text-white"
-            />
+          {/* Two-line Hero Heading */}
+          <div className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-6 text-center">
+            <div className="flex justify-center flex-wrap gap-x-2">
+              <BlurText
+                text="You Need"
+                delay={100}
+                animateBy="words"
+                direction="top"
+                className="text-white"
+              />
+              <BlurText
+                text="Website,"
+                delay={200}
+                animateBy="words"
+                direction="top"
+                className="text-emerald-400"
+              />
+            </div>
+            <div className="flex justify-center flex-wrap gap-x-2 mt-2">
+              <BlurText
+                text="We Create"
+                delay={300}
+                animateBy="words"
+                direction="top"
+                className="text-emerald-400"
+              />
+              <BlurText
+                text="Websites"
+                delay={400}
+                animateBy="words"
+                direction="top"
+                className="text-white"
+              />
+            </div>
           </div>
 
+          {/* Subheading */}
           <p className="text-gray-200 text-lg mb-8">
             From personal portfolios to full-scale business solutions — we've got you covered.
           </p>
 
+          {/* Call-to-Action & User Info */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-pink-500 hover:bg-gray-300 text-white px-6 py-3 rounded-full shadow-lg transition duration-300 hover:text-black font-bold">
               <a href="/services">Get Started</a>
