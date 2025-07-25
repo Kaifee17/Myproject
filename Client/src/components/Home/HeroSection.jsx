@@ -3,32 +3,28 @@ import { useNavigate } from 'react-router-dom';
 import backgroundImage from '../../assets/background.avif';
 import { jwtDecode } from 'jwt-decode';
 import AppContext from '../../context/appContext';
-
+import BlurText from '../../../BlurText/BlurText/BlurText';
 
 const HeroSection = () => {
   const navigate = useNavigate();
   const { isLogin, userData } = useContext(AppContext); 
-
   const [userEmail, setUserEmail] = useState('');
 
   useEffect(() => {
-  const accessToken = localStorage.getItem('accessToken');
-  if (isLogin && accessToken) {
-    try {
-      const decoded = jwtDecode(accessToken);
-      console.log('Decoded Token:', decoded); // 👈 Add this line
-
-      const email = decoded?.email || decoded?.username || decoded?.sub || 'User';
-      setUserEmail(email);
-    } catch (error) {
-      console.error('Failed to decode token:', error);
+    const accessToken = localStorage.getItem('accessToken');
+    if (isLogin && accessToken) {
+      try {
+        const decoded = jwtDecode(accessToken);
+        const email = decoded?.email || decoded?.username || decoded?.sub || 'User';
+        setUserEmail(email);
+      } catch (error) {
+        console.error('Failed to decode token:', error);
+        setUserEmail('');
+      }
+    } else {
       setUserEmail('');
     }
-  } else {
-    setUserEmail('');
-  }
-}, [isLogin]);
-
+  }, [isLogin]);
 
   return (
     <section
@@ -37,10 +33,37 @@ const HeroSection = () => {
     >
       <div className="bg-black bg-opacity-20 w-full h-full flex items-center justify-center">
         <div className="text-center max-w-3xl px-6">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-            You Need <span className="text-emerald-400">Website</span>,<br />
-            We Create <span className="text-emerald-400">Websites</span>
-          </h1>
+          <div className="text-4xl md:text-6xl font-bold leading-tight mb-6 flex flex-wrap justify-center gap-x-2">
+            <BlurText
+              text="You Need"
+              delay={100}
+              animateBy="words"
+              direction="top"
+              className="text-white"
+            />
+            <BlurText
+              text="Website,"
+              delay={200}
+              animateBy="words"
+              direction="top"
+              className="text-emerald-400"
+            />
+            <BlurText
+              text="We Create"
+              delay={300}
+              animateBy="words"
+              direction="top"
+              className="text-emerald-400"
+            />
+            <BlurText
+              text="Websites"
+              delay={400}
+              animateBy="words"
+              direction="top"
+              className="text-white"
+            />
+          </div>
+
           <p className="text-gray-200 text-lg mb-8">
             From personal portfolios to full-scale business solutions — we've got you covered.
           </p>
@@ -51,10 +74,10 @@ const HeroSection = () => {
             </button>
 
             {isLogin ? (
-               <div className="bg-gray-400 px-6 py-1 rounded-2xl shadow-lg font-bold text-white text-center leading-snug">
-               <p className="text-s capitalize">{userData?.name || 'User'}</p>
-               <p className="text-xs">{userData?.email || userEmail}</p>
-                </div>
+              <div className="bg-gray-400 px-6 py-1 rounded-2xl shadow-lg font-bold text-white text-center leading-snug">
+                <p className="text-s capitalize">{userData?.name || 'User'}</p>
+                <p className="text-xs">{userData?.email || userEmail}</p>
+              </div>
             ) : (
               <button className="bg-pink-500 hover:bg-gray-300 text-white px-10 py-3 rounded-full shadow-lg transition duration-300 hover:text-black font-bold">
                 <a href="/login">Login</a>

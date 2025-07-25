@@ -12,6 +12,7 @@ import Airwallex from '../../assets/Airwallex.webp';
 import Verizon from '../../assets/Verizon.webp';
 import Salesforce from '../../assets/Salesforce.webp';
 
+
 const TrustedBy = () => {
   const companies = [
     { logo: tencent },

@@ -29,7 +29,6 @@ import EmailButton from './components/Common/EmailButton';
 
 
 
-
 const App = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [userData, setuserData] = useState(null)
@@ -66,6 +65,7 @@ const App = () => {
     <>
       <AppContext.Provider value={values}>
         <Navbar />
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Price />} />
@@ -88,6 +88,7 @@ const App = () => {
         <EmailButton/>
         <Footer />
         <Toaster />
+
       </AppContext.Provider>
       </>
     
