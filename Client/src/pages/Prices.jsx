@@ -129,12 +129,12 @@ const LandingPage = () => {
     <div className="font-sans bg-gradient-to-br from-pink-400 to-pink-700 text-gray-800">
       {/* Hero Section */}
       <section className="text-center py-24 px-4">
-        <h2 className="text-xl text-white font-semibold">Website Start's @ 12999/-</h2>
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight mt-4 text-white">
+        <h2 className="font-inter text-xl text-white font-semibold mt-5">Website Start's @ 12999/-</h2>
+        <h1 className="font-serif text-3xl md:text-5xl font-bold leading-tight mt-4 text-white">
           Best Website Design Company That Will Increase Your Online Presences
         </h1>
-        <p className="mt-4 text-lg text-white">5000+ Businesses Trusted Webdone</p>
-        <button className="mt-6 px-6 py-3 bg-pink-400 hover:bg-pink-600 text-white font-semibold rounded-full">
+        <p className="font-inter mt-4 text-lg text-white">5000+ Businesses Trusted Webdone</p>
+        <button className="font-inter mt-6 px-6 py-3 bg-pink-400 hover:bg-pink-600 text-white font-semibold rounded-full">
           <a href="/contact">💬 TALK TO WEBSITE EXPERT !</a>
         </button>
       </section>

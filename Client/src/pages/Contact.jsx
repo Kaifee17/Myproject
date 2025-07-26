@@ -63,16 +63,16 @@ const Contact = () => {
         <p className="font-medium">📌 Note:</p>
       <p>Please use the correct email address, as we will respond to you via the same email.</p>
         </div>
-          <h2 className="text-4xl font-bold mb-6">Contact Information</h2>
+          <h2 className="font-serif text-4xl font-bold mb-6">Contact Information</h2>
           
-          <p className="mb-6">We’d love to hear from you. Reach out for any questions or support.</p>
+          <p className="font-inter mb-6">We’d love to hear from you. Reach out for any questions or support.</p>
 
           <div className="space-y-6 text-lg">
-            <div>
-              <h4 className="font-semibold">📍 Address</h4>
+            <div className='font-inter'>
+              <h4 className="font-inter font-semibold">📍 Address</h4>
               <p>Bellandur<br />Bengaluru, India 560066</p>
             </div>
-            <div>
+            <div className='font-inter'>
               <h4 className="font-semibold">✉️ Email</h4>
               <p>WebDone00@gmail.com</p>
             </div>
@@ -81,7 +81,7 @@ const Contact = () => {
 
         {/* Right: White Form */}
         <div className="bg-white p-10">
-          <h2 className="text-4xl font-bold text-red-500 mb-6">Send a Message</h2>
+          <h2 className=" font-jakarta text-4xl font-bold text-red-500 mb-6">Send a Message</h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label className="block mb-1 font-medium text-gray-700">Name</label>

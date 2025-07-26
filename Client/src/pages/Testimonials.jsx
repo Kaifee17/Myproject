@@ -92,7 +92,7 @@ const Testimonials = () => {
     <section className="mt-34 py-16 bg-gray-500">
 
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mt-10 mb-12 text-black">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold mt-10 mb-12 text-black">
           What Our Clients Say
         </h2>
 

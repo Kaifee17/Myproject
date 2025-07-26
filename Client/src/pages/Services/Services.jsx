@@ -46,9 +46,9 @@ const services = [
 const Services = () => {
   return (
     <section className="pt-24 pb-16 px-6 bg-pink-400 text-white">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Our Website Development Services</h2>
-        <p className="max-w-2xl mx-auto text-lg">
+      <div className="max-w-6xl mx-auto text-center mb-12 mt-6">
+        <h2 className=" font-serif text-4xl font-bold mb-4">Our Website Development Services</h2>
+        <p className="font-inter max-w-1xl mx-auto text-lg">
           Transform your online presence with high-performing websites that boost engagement and drive conversions.
         </p>
       </div>
