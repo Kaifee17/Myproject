@@ -33,12 +33,12 @@ const TrustedBy = () => {
     { logo: Bytewise },
   ];
 
-  // Duplicate the logos for seamless loop
+
   const scrollingLogos = [...companies, ...companies];
 
   return (
     <>
-      {/* Inline Tailwind-style animation using @layer */}
+     
       <style>{`
         
 

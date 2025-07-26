@@ -82,7 +82,7 @@ const logout = () => {
             <li>
               <button
                 onClick={logout}
-                className="bg-gray-600 hover:bg-pink-600 text-white px-4 py-1 rounded-full transition duration-300 shadow-md"
+                className="bg-gray-600 hover:bg-pink-600 text-white px-4 py-1 rounded-full transition duration-300 shadow-md font-jakarta"
               >
                 Logout
               </button>

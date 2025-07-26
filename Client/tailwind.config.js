@@ -11,7 +11,8 @@ export default {
         playfair: ['Playfair Display', 'serif'],
         playwrite :['Playwrite'] , 
         dancing: ['"Dancing Script"', 'cursive'],
-        jakarta :[' Plus Jakarta Sans', 'sans-serif']
+        jakarta :[' Plus Jakarta Sans', 'sans-serif'],
+        lato : ['Lato','sans-serif'],
       },
       keyframes: {
         marquee: {

@@ -4,7 +4,7 @@ import backgroundImage from '../../assets/background.avif';
 import { jwtDecode } from 'jwt-decode';
 import AppContext from '../../context/appContext';
 import BlurText from '../../../BlurText/BlurText/BlurText';
-
+import Particles from '../../../Particles/Particles/Particles';
 const HeroSection = () => {
   const navigate = useNavigate();
   const { isLogin, userData } = useContext(AppContext); 
@@ -28,30 +28,46 @@ const HeroSection = () => {
 
   return (
     <section
-      className="h-screen bg-cover bg-center bg-no-repeat text-white"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+    className="h-screen bg-cover bg-center bg-no-repeat text-white relative"
+    style={{ backgroundImage: `url(${backgroundImage})` }}
     >
+
+
+    <div className="absolute top-0 left-0 w-full h-full z-0">
+    <Particles
+    particleColors={['#ffffff', '#ffffff']}
+    particleCount={200}
+    particleSpread={10}
+    speed={0.2}
+    particleBaseSize={100}
+    moveParticlesOnHover={true}
+    alphaParticles={false}
+    disableRotation={false}
+    />
+    </div>
+
       <div className="bg-black bg-opacity-20 w-full h-full flex items-center justify-center">
         <div className="text-center max-w-3xl px-6">
          <div className="text-4xl md:text-6xl font-bold leading-tight mb-6 flex flex-col items-center space-y-2">
-      <div className="flex flex-wrap justify-center gap-x-2">
-        <BlurText
+      <div className="flex flex-col items-center space-y-1">
+      <div className="flex justify-center gap-x-2 whitespace-nowrap">
+      <BlurText
       text="You Need"
       delay={100}
       animateBy="words"
       direction="top"
       className="text-white font-playfair"
-        />
-        <BlurText
+      />
+      <BlurText
       text="Website,"
       delay={200}
       animateBy="words"
       direction="top"
       className="text-emerald-400 font-playfair italic font-semibold"
-    />
-  </div>
+      />
+      </div>
 
-  <div className="flex flex-wrap justify-center gap-x-2">
+    <div className="flex justify-center gap-x-2 whitespace-nowrap">
     <BlurText
       text="We Create"
       delay={300}
@@ -66,7 +82,9 @@ const HeroSection = () => {
       direction="top"
       className="text-white font-playfair"
     />
-  </div>
+    </div>
+    </div>
+
 </div>
 
 
