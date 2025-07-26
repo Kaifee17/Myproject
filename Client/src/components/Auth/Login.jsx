@@ -92,7 +92,7 @@ const Login = () => {
     };
 
   return (
-    <section className="pt-20 min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-pink-400 to-pink-600">
+    <section className="pt-20 min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-400 via-pink-500 to-pink-600">
       <div className="shadow-md w-full max-w-md rounded-md bg-white px-8 py-8">
         <h3 className="text-center text-[20px] text-black font-semibold mb-6">
           Login to your account

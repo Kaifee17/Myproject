@@ -13,6 +13,8 @@ export default {
         dancing: ['"Dancing Script"', 'cursive'],
         jakarta :[' Plus Jakarta Sans', 'sans-serif'],
         lato : ['Lato','sans-serif'],
+        marcellus :['Marcellus','serif'],
+        inter :['Inter','sans-serif']
       },
       keyframes: {
         marquee: {

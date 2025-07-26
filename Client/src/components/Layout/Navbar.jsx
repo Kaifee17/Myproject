@@ -52,7 +52,7 @@ const logout = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo" className="w-10 h-10 object-contain" />
-          <a className="text-xl font-dancing  font-bold text-gray-300 " href="/">WebDone</a>
+          <a className="text-xl font-marcellus  font-bold text-gray-100 " href="/">WebDone</a>
         </div>
 
         <div className="md:hidden">

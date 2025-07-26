@@ -33,7 +33,7 @@ const HeroSection = () => {
     >
 
 
-    <div className="absolute top-0 left-0 w-full h-full z-0">
+    <div className="absolute top-0 left-0 w-full h-full z-0 ">
     <Particles
     particleColors={['#ffffff', '#ffffff']}
     particleCount={200}
@@ -48,9 +48,9 @@ const HeroSection = () => {
 
       <div className="bg-black bg-opacity-20 w-full h-full flex items-center justify-center">
         <div className="text-center max-w-3xl px-6">
-         <div className="text-4xl md:text-6xl font-bold leading-tight mb-6 flex flex-col items-center space-y-2">
+         <div className="text-3xl md:text-6xl font-bold leading-tight mb-6 flex flex-col items-center space-y-2">
       <div className="flex flex-col items-center space-y-1">
-      <div className="flex justify-center gap-x-2 whitespace-nowrap">
+      <div className="flex flex-wrap justify-center gap-x-2">
       <BlurText
       text="You Need"
       delay={100}
@@ -67,7 +67,7 @@ const HeroSection = () => {
       />
       </div>
 
-    <div className="flex justify-center gap-x-2 whitespace-nowrap">
+    <div className="flex flex-wrap justify-center gap-x-2">
     <BlurText
       text="We Create"
       delay={300}
@@ -85,15 +85,15 @@ const HeroSection = () => {
     </div>
     </div>
 
-</div>
+    </div>
 
 
           <p className="text-gray-200 text-lg mb-8 font-sans">
             From personal portfolios to full-scale business solutions — we've got you covered.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-pink-500 hover:bg-gray-300 text-white px-6 py-3 rounded-full shadow-lg transition duration-300 hover:text-black font-bold">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center z-10 relative">
+            <button className="bg-pink-500 hover:bg-gray-300 text-white px-6 py-3 rounded-full shadow-lg transition duration-300 hover:text-black font-inter font-bold">
               <a href="/services">Get Started</a>
             </button>
 
@@ -103,7 +103,7 @@ const HeroSection = () => {
                 <p className="text-xs">{userData?.email || userEmail}</p>
               </div>
             ) : (
-              <button className="bg-pink-500 hover:bg-gray-300 text-white px-10 py-3 rounded-full shadow-lg transition duration-300 hover:text-black font-bold">
+              <button className="bg-pink-500 hover:bg-gray-300 text-white px-10 py-3 rounded-full shadow-lg transition duration-300 hover:text-black font-inter font-bold">
                 <a href="/login">Login</a>
               </button>
             )}
