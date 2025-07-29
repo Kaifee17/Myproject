@@ -19,7 +19,7 @@ import router from './routes/auth.route.js';
 dotenv.config();
 const app = express();
 
-// ✅ CORS — allow frontend domain
+
 const allowedOrigins = [
   'https://webdone.in',
   'https://www.webdone.in',
@@ -31,31 +31,31 @@ app.use(cors({
   credentials: true
 }));
 
-// ✅ Preflight support
+
 app.options('*', cors());
 
-// ✅ Middleware
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('tiny'));
 app.use(helmet({ crossOriginEmbedderPolicy: false }));
 
-// ✅ Production-ready session config
+
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: true, // ✅ Required for HTTPS on Render
-    sameSite: 'none', // ✅ Required for cross-site cookies
-    maxAge: 24 * 60 * 60 * 1000 // 1 day
+    secure: true, 
+    sameSite: 'none', 
+    maxAge: 24 * 60 * 60 * 1000 
   }
 }));
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-// ✅ Routes
+
 app.get('/', (req, res) => {
   res.json({ message: 'Production server running on port ' + process.env.PORT });
 });
@@ -66,13 +66,13 @@ app.use('/api/project', projectRouter);
 app.use('/api/quote', QuoteRouter);
 app.use('/api/contactForm', Contactrouter);
 
-// ✅ Sentry error handler
+
 Sentry.setupExpressErrorHandler(app);
 
-// ✅ Start server
+
 const PORT = process.env.PORT || 5000;
 connectDB().then(() => {
   app.listen(PORT, () => {
-    console.log('✅ Production server is running on port', PORT);
+    console.log(' Production server is running on port', PORT);
   });
 });
