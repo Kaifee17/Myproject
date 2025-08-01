@@ -156,14 +156,14 @@ const LandingPage = () => {
                   {plan.badge}
                 </div>
               )}
-              <h3 className="text-lg font-bold text-pink-400">{plan.title}</h3>
-              <p className="text-xl font-bold">{plan.price}</p>
+              <h3 className="text-xl font-inter  font-bold text-pink-400">{plan.title}</h3>
+              <p className="text-xl font-lato font-bold">{plan.price}</p>
               <p className="text-sm mb-4">{plan.desc}</p>
               <button className="mb-4 px-4 py-2 bg-pink-400 hover:bg-pink-600 text-white rounded-full text-sm">
                 <a href="/request-quote">⚙ Choose Plan</a>
               </button>
 
-              {/* Features Section */}
+
               <p className="font-semibold text-pink-500 mt-2">Why This Plan?</p>
               <ul className="text-sm space-y-1 mb-4">
                 {plan.features?.map((feat, i) => (
@@ -171,7 +171,6 @@ const LandingPage = () => {
                 ))}
               </ul>
 
-              {/* Functionality Section */}
               <p className="font-semibold text-pink-500">Functionality</p>
               <ul className="text-sm space-y-1 mb-4">
                 {plan.functionality?.map((item, i) => (
@@ -179,7 +178,7 @@ const LandingPage = () => {
                 ))}
               </ul>
 
-              {/* Website Security Section */}
+
               <p className="font-semibold text-pink-500">Website Security</p>
               <hr className="my-1" />
               <ul className="text-sm space-y-1">
@@ -191,7 +190,7 @@ const LandingPage = () => {
           ))}
         </div>
 
-        {/* Portfolio & Testimonials */}
+
         <div className="py-8 mt-5">
           <Port />
           <Testi />
