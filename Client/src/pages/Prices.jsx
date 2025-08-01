@@ -144,7 +144,7 @@ const LandingPage = () => {
       </section>
 
 
-      <section className="px-4 py-4">
+      <section className="px-4 py-1">
         <div className="grid md:grid-cols-4 gap-6">
           {plans.map((plan, idx) => (
             <div
