@@ -1,6 +1,5 @@
 import dotenv from 'dotenv';
 
-
 import contactModel from '../models/Contactform.model.js';
 import ContactEmail from '../utils/contactEmail.js';
 import sendEmailFun from '../config/sendEmailFun.js';

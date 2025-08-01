@@ -6,7 +6,7 @@ const LandingPage = () => {
   const plans = [
     {
       title: 'Startup Plan',
-      price: '₹12,999/($155.90 usd)',
+      price: '₹27,999/($320)',
       desc: 'Best For Startup’s',
       renewal: 'Annual Renewal 2999/-',
       features: [
@@ -22,12 +22,13 @@ const LandingPage = () => {
         'Upgradable later — advanced features are offered in higher plans',
       ],
       functionality: [
-        'Live Chat',
-        'Contact Form',
-        'Click to Call Button',
-        'Whatsapp Integration',
-        'Lead Generation Form',
+      'Basic Live Chat Integration',
+      'Simple Contact Form (No Auto-response)',
+      'Click-to-Call Button',
+      'WhatsApp Chat Button Only',
+      'Lead Capture (Manual Follow-up)',
       ],
+
       security: [
         'Free SSL Certificate',
         'Technical Support 1 Year',
@@ -36,7 +37,7 @@ const LandingPage = () => {
     },
     {
       title: 'Classic Plan',
-      price: '₹21,999/($255 usd)',
+      price: '₹48,999/($560)',
       desc: 'Best for Startups & Small Businesses',
       badge: 'POPULAR',
       renewal: 'Annual Renewal 3499/-',
@@ -53,12 +54,13 @@ const LandingPage = () => {
         'Better suited for growing businesses',
       ],
       functionality: [
-        'Live Chat',
-        'Advanced Contact Forms',
-        'WhatsApp + Messenger Integration',
-        'Newsletter Signup',
-        'Lead Capture with Auto-Reply',
-      ],
+      'Live Chat with Email Notification',
+      'Advanced Contact Forms with Validation',
+      'WhatsApp + Messenger Integration',
+      'Newsletter Signup Form',
+      'Lead Capture with Auto-Reply Email',
+],
+
       security: [
         'Free SSL Certificate',
         'Technical Support 1 Year',
@@ -68,7 +70,7 @@ const LandingPage = () => {
     },
     {
       title: 'Premium Plan',
-      price: '₹31,999/($382 USD)',
+      price: '₹61,999/($710)',
       desc: 'Best For Enterprises',
       renewal: 'Annual Renewal 3999/-',
       features: [
@@ -84,12 +86,13 @@ const LandingPage = () => {
         'Perfect for established or scaling companies',
       ],
       functionality: [
-        'Multi-channel Live Chat',
-        'Custom Forms with Field Logic',
-        'Appointment Booking System',
-        'Advanced Lead Management Tools',
-        'Integrations with CRM or Mail Platforms',
-      ],
+  'Multi-Channel Live Chat (WhatsApp, Messenger, Webchat)',
+  'Smart Forms with Conditional Logic & Auto-Reply',
+  'Appointment Booking System with Calendar Sync',
+  'Advanced Lead Management Dashboard',
+  'CRM, Email Marketing & Payment Gateway Integrations',
+],
+
       security: [
         'Free SSL Certificate',
         'Priority Technical Support (1 Year)',
@@ -112,10 +115,11 @@ const LandingPage = () => {
         'Best suited for complex business operations',
       ],
       functionality: [
-        'Fully tailored features based on consultation',
-        'You define the workflows, we build it',
-        'Third-party or in-house tools integration',
-      ],
+  'Custom Feature Development After Discussion',
+  'Workflow Automation Based on Requirements',
+  'Third-party or Internal Tool Integration',
+],
+
       security: [
         'Enterprise-grade SSL & firewalls',
         'Full compliance with project needs',
@@ -127,7 +131,7 @@ const LandingPage = () => {
 
   return (
     <div className="font-sans bg-gradient-to-br from-pink-400 to-pink-700 text-gray-800">
-      {/* Hero Section */}
+
       <section className="text-center py-24 px-4">
         <h2 className="font-inter text-xl text-white font-semibold mt-5">Website Start's @ 12999/-</h2>
         <h1 className="font-serif text-3xl md:text-5xl font-bold leading-tight mt-4 text-white">
@@ -139,7 +143,7 @@ const LandingPage = () => {
         </button>
       </section>
 
-      {/* Pricing Section */}
+
       <section className="px-4 py-4">
         <div className="grid md:grid-cols-4 gap-6">
           {plans.map((plan, idx) => (
