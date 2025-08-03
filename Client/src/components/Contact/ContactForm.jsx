@@ -5,6 +5,7 @@
   import { postData } from '../../utils/api';
 import AppContext from '../../context/appContext';
 import BlurText from '../../../BlurText/BlurText/BlurText'
+import DecryptedText from '../../../decryptedText/DecryptedText/DecryptedText';
   const ContactForm = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [formFields, setFormFields] = useState({
@@ -60,7 +61,7 @@ import BlurText from '../../../BlurText/BlurText/BlurText'
           <div className="w-full md:w-1/2 p-6 bg-black rounded-xl shadow flex flex-col
            h-[500px]">
           {/* Top Half - Contact Info */}
-          <div className="flex-1 flex flex-col justify-center">
+          <div className="flex-1 flex flex-col ">
             <h2 className="text-2xl font-serif font-bold mb-4 text-center">
           <div className="flex justify-center w-full">
           <BlurText
@@ -73,7 +74,7 @@ import BlurText from '../../../BlurText/BlurText/BlurText'
           </div>
         </h2>
 
-            <p className="mb-6 font-poppins text-center text-gray-200">
+            <p className="mb-6 mt-2 font-poppins text-center text-gray-200">
               Feel free to reach out to us anytime.
             </p>
             <div className="flex font-poppins flex-col items-center text-gray-200 space-y-4">
@@ -88,61 +89,71 @@ import BlurText from '../../../BlurText/BlurText/BlurText'
           </div>
           </div>
 
-        {/* Bottom Half - Quote */}
+        {/* - Quote */}
         <div className="flex-1 flex items-center justify-center border-t border-gray-700">
-        <p className="text-gray-300 text-center font-normal font-serif  px-4">
-        "If you’ve reached this address, congratulations — you’ve arrived at the home of the best websites in town."
-        </p>
-        </div>
+        <DecryptedText
+        text="If you’ve reached this address, congratulations — you’ve arrived at the home of the best websites in town."
+        speed={100}
+        maxIterations={20}
+        characters="ABCD1234!?"
+        className="text-white font-serif"
+        parentClassName="text-center text-lg"
+        encryptedClassName="text-gray-100"
+        />
+      </div>
+
       </div>
 
 
 
           {/* Contact Form */}
-          <div className="w-full md:w-1/2 p-6 bg-white rounded-xl shadow">
-            <h2 className="text-2xl font-bold mb-4">Send a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formFields.name}
-                onChange={onChangeInput}
-                className="w-full border border-gray-300 p-3 rounded"
-                required
-                disabled={isLoading}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formFields.email}
-                onChange={onChangeInput}
-                className="w-full border border-gray-300 p-3 rounded"
-                required
-                disabled={isLoading}
-              />
-              <textarea
-                name="message"
-                rows="4"
-                placeholder="Your Message"
-                value={formFields.message}
-                onChange={onChangeInput}
-                className="w-full border border-gray-300 p-3 rounded"
-                required
-                disabled={isLoading}
-              />
-              <button
-                type="submit"
-                disabled={isLoading}
-                className={`bg-emerald-500 text-white px-6 py-3 rounded transition ${
-                  isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-emerald-600'
-                }`}
-              >
-                {isLoading ? 'Sending...' : 'Send'}
-              </button>
-            </form>
-          </div>
+          <div className="w-full md:w-1/2 p-6 bg-white rounded-xl shadow-2xl border border-gray-400">
+          <h2 className="text-2xl font-serif font-bold mb-4">Send a Message</h2>
+          <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formFields.name}
+          onChange={onChangeInput}
+          className="w-full border font-poppins shadow border-gray-300 p-3 rounded"
+          required
+          disabled={isLoading}
+        />
+        <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        value={formFields.email}
+        onChange={onChangeInput}
+        className="w-full border font-poppins shadow border-gray-300 p-3 rounded"
+        required
+        disabled={isLoading}
+        />
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="Your Message"
+        value={formFields.message}
+        onChange={onChangeInput}
+        className="w-full border font-poppins shadow border-gray-300 p-3 rounded"
+        required
+        disabled={isLoading}
+       />
+      <div className='text-center'>
+      <button
+        type="submit"
+        disabled={isLoading}
+        className={`bg-emerald-500 w-full text-white px-6 py-3 rounded-2xl font-jakarta font-semibold transition ${
+          isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-emerald-700'
+        }`}
+      >
+        {isLoading ? 'Sending...' : 'Send'}
+      </button>
+    </div>
+  </form>
+</div>
+
         </div>
       </section>
     );

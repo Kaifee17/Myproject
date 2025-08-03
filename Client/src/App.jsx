@@ -4,7 +4,6 @@ import toast, { Toaster } from 'react-hot-toast';
 
 import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
-
 import Home from './pages/Home';
 import Price from './pages/Prices';
 import Contact from './pages/Contact';
@@ -26,7 +25,7 @@ import { fetchDataFromApi } from './utils/api';
 import ForgotPassword from './pages/forgotPassword';
 import AppContext from './context/appContext';
 import EmailButton from './components/Common/EmailButton';
-
+import ScrollToTop  from  './components/Common/ScrollToTop'
 
 
 const App = () => {
@@ -65,7 +64,7 @@ const App = () => {
     <>
       <AppContext.Provider value={values}>
         <Navbar />
-        
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Price />} />
