@@ -7,7 +7,7 @@ const LandingPage = () => {
     {
       title: 'Startup Plan',
       price: '₹27,999/($320)',
-      desc: 'Best For Startup’s',
+      desc: 'Best For Startups',
       renewal: 'Annual Renewal 2999/-',
       features: [
         'Basic tech stack used for cost-efficiency and faster development',
@@ -132,8 +132,8 @@ const LandingPage = () => {
   return (
     <div className="font-sans bg-gradient-to-br from-pink-400 to-pink-700 text-gray-800">
 
-      <section className="text-center py-24 px-4">
-        <h2 className="font-inter text-xl text-white font-semibold mt-5">Website Start's @ 12999/-</h2>
+      <section className="text-center py-20 px-4">
+        <h2 className="font-inter text-xl text-white font-semibold mt-9">Website Start's @ 12999/-</h2>
         <h1 className="font-serif text-3xl md:text-5xl font-bold leading-tight mt-4 text-white">
           Best Website Design Company That Will Increase Your Online Presences
         </h1>
