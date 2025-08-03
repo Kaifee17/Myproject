@@ -4,7 +4,7 @@
   
   import { postData } from '../../utils/api';
 import AppContext from '../../context/appContext';
-
+import BlurText from '../../../BlurText/BlurText/BlurText'
   const ContactForm = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [formFields, setFormFields] = useState({
@@ -57,20 +57,46 @@ import AppContext from '../../context/appContext';
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
           {/* Contact Info */}
-          <div className="w-full md:w-1/2 p-6 bg-gray-100 rounded-xl shadow">
-            <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-            <p className="mb-6 text-gray-600">Feel free to reach out to us anytime.</p>
-            <div className="space-y-4 text-gray-700">
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3" />
-                <span>webdone00@gmail.com</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3" />
-                <span>560066, Bangalore, India</span>
-              </div>
-            </div>
+          <div className="w-full md:w-1/2 p-6 bg-black rounded-xl shadow flex flex-col
+           h-[500px]">
+          {/* Top Half - Contact Info */}
+          <div className="flex-1 flex flex-col justify-center">
+            <h2 className="text-2xl font-serif font-bold mb-4 text-center">
+          <div className="flex justify-center w-full">
+          <BlurText
+          text="Contact Information"
+          delay={100}
+          animateBy="words"
+          direction="top"
+          className="text-white font-playfair"
+          />
           </div>
+        </h2>
+
+            <p className="mb-6 font-poppins text-center text-gray-200">
+              Feel free to reach out to us anytime.
+            </p>
+            <div className="flex font-poppins flex-col items-center text-gray-200 space-y-4">
+            <div className="flex items-center">
+            <Mail className="w-5 h-5 mr-3" />
+            <span>webdone00@gmail.com</span>
+            </div>
+            <div className="flex items-center">
+            <MapPin className="w-5 h-5 mr-3" />
+            <span>560066, Bangalore, India</span>
+          </div>
+          </div>
+          </div>
+
+        {/* Bottom Half - Quote */}
+        <div className="flex-1 flex items-center justify-center border-t border-gray-700">
+        <p className="text-gray-300 text-center font-normal font-serif  px-4">
+        "If you’ve reached this address, congratulations — you’ve arrived at the home of the best websites in town."
+        </p>
+        </div>
+      </div>
+
+
 
           {/* Contact Form */}
           <div className="w-full md:w-1/2 p-6 bg-white rounded-xl shadow">
