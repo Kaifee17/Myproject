@@ -95,7 +95,7 @@ import DecryptedText from '../../../decryptedText/DecryptedText/DecryptedText';
         text="If you’ve reached this address, congratulations — you’ve arrived at the home of the best websites in town."
         speed={100}
         maxIterations={20}
-        characters="ABCD1234!?"
+        characters="$# WebDone #$"
         className="text-white font-serif"
         parentClassName="text-center text-lg"
         encryptedClassName="text-gray-100"
