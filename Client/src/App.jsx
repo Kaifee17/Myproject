@@ -27,6 +27,8 @@ import AppContext from './context/appContext';
 import EmailButton from './components/Common/EmailButton';
 import ScrollToTop  from  './components/Common/ScrollToTop'
 
+import '@n8n/chat/style.css';
+import { createChat } from '@n8n/chat';
 
 const App = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -35,6 +37,22 @@ const App = () => {
     if (type === 'success') toast.success(msg);
     if (type === 'error') toast.error(msg);
   };
+ useEffect(() => {
+  createChat({
+    webhookUrl: 'https://lwksajasj.app.n8n.cloud/webhook/9e01270f-9084-42c9-849e-2e9c6c121b36/chat',
+    initialMessages: [
+      "Hey there! You’re just a chat away from getting your dream website."
+    ],
+    i18n: {
+      en: {
+        title: 'Welcome to WebDone  ',
+        subtitle: "We are available here for You 24/7.",
+      },
+    },
+  });
+}, []);
+
+
 
 
   useEffect(() => {
